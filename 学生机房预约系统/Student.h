@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 #include"Identity.h"
 #include<iostream>
-
+#include<vector>
+#include"ComputerRoom.h"
 using namespace std;
 
-
+    
 class Student :public Identity {
 public:
 	Student();
@@ -22,4 +23,6 @@ public:
 	void cancelOrder();
 
 	int i_Id;
+
+	vector<ComputerRoom> vCom;
 };

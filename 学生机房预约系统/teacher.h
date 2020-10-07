@@ -1,8 +1,8 @@
-#pragma once
+﻿#pragma once
 #include"Identity.h"
 #include<iostream>
 
-using namespace std;
+using namespace std; 
 
 class Teacher :public Identity {
 public:
