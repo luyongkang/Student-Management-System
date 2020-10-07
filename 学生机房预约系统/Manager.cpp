@@ -110,12 +110,12 @@ void Manager::showPerson()
 	int select = 0;
 	cin >> select;
 
-	if (select = 1)
+	if (select == 1)
 	{
 		cout << "学生信息：" << endl; 
 		for_each(vStu.begin(), vStu.end(), printStudent);
 	}
-	else if (select = 2)
+	else if (select == 2)
 	{
 		cout << "教师信息：" << endl;
 		for_each(vTea.begin(), vTea.end(), printTeacher);

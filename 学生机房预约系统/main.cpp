@@ -12,6 +12,7 @@ using namespace std;
 void LoginIn(string filename, int type);
 void managerMenu(Identity*& manager);
 void studentMenu(Identity* student);
+void teacherMenu(Identity* teacher);
 
 int main() {
 	int select = -1;
@@ -131,7 +132,7 @@ void LoginIn(string filename, int type) {
 				system("pause");
 				system("cls");
 				person = new Teacher(id, name, pwd);
-				
+				teacherMenu(person);
 				return;
 			}
 		}
@@ -222,6 +223,37 @@ void studentMenu(Identity* student)
 		else
 		{
 			delete student;
+			cout << "注销成功" << endl;
+			system("pause");
+			system("cls");
+			return;
+		}
+	}
+}
+
+void teacherMenu(Identity* teacher)
+{
+	while (true)
+	{
+		teacher->operMenu();
+		Teacher* tea = dynamic_cast<Teacher*>(teacher);
+
+		int select = 0;
+
+		cin >> select;
+
+		if (select == 1)
+		{
+			tea->showAllOrder();
+		}
+		else if (select == 2)
+		{
+			tea->validOrder();
+
+		}
+		else
+		{
+			delete teacher;
 			cout << "注销成功" << endl;
 			system("pause");
 			system("cls");
